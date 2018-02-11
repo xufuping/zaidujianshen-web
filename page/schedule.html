@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="author" content="XuQingfeng">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <title>Bodybuilding Website</title>
+
+    <!-- link uikit -->
+    <link rel="stylesheet" type="text/css" href="../css/uikit.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/form-select.css">
+
+    <!--link swiper-->
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css"/>
+
+    <!--头部和尾部的CSS-->
+    <link rel="stylesheet" href="../css/commonPart.css"/>
+    <!--边栏的CSS-->
+    <link rel="stylesheet" href="../css/sidebar.css"/>
+    <!--中间内容css-->
+    <link rel="stylesheet" href="../css/index.css"/>
+    <!--页面中间主要内容相对应的css-->
+    <link rel="stylesheet" href="../css/schedule.css"/>
+</head>
+
+<!--自适应页面-width: auto; width: xx%;-->
+
+<!-- 判断浏览器，低版本升级 -->
+<!--[if lt IE 9]>
+<p class="chromeframe">The IE browser version you are using is too low and this site is no longer supported,<a href="//windows.microsoft.com/">Please upgrade your IE browser</a>，Or use<a href="//www.google.cn/chrome/">Google Chrome</a>、<a href="//www.firefox.com.cn/download/">Firefox</a>These advanced browsers, you'll get a better experience!</p>
+<![endif]-->
+
+<body>
+<!--头部-->
+@@include('include/header.html')
+
+<!--中间部分-->
+<div class="content clearfix">
+
+    <!--中间主要内容-->
+    <div class="schedule uk-animation-slide-bottom">
+        <h2 class="scheduleImgTitle">Group schedule</h2>
+        <img class="scheduleImg" src=""/>
+        <h2 class="dueImgTitle">Membership dues</h2>
+        <img class="dueImg" src=""/>
+    </div>
+
+    <!--右侧板栏-->
+    <div class="sidebar">
+        @@include('include/sidebar.html')
+    </div>
+
+</div>
+
+<!--尾部-->
+@@include('include/footer.html')
+
+<!--导入jq库件-->
+<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+
+<!--导入uikit-->
+<script type="text/javascript" src="../js/uikit.min.js"></script>
+<!--<script type="text/javascript" src="../js/datepicker.min.js" ></script>-->
+<!--<script type="text/javascript" src="../js/form-select.js" ></script>-->
+
+<!--头部尾部用到的js-->
+<script type="text/javascript" src="../js/topbottom.js"></script>
+
+<!--导入swiper-->
+<script type="text/javascript" src="../js/swiper-3.4.2.jquery.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+</script>
+
+<!--边栏用到的js-->
+<script type="text/javascript" src="../js/sidebar.js"></script>
+
+<!--页面中间主要内容相对应的js-->
+<script type="text/javascript" src="../js/schedule.js"></script>
+
+</body>
+</html>

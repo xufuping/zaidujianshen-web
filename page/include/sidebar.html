@@ -1,0 +1,109 @@
+<!--&lt;!&ndash;搜索框&ndash;&gt;-->
+<!--<form class="uk-form uk-hidden-small">-->
+    <!--<select id="searchChoose">-->
+        <!--<option value="time">time</option>-->
+        <!--<option value="title">title</option>-->
+    <!--</select>-->
+    <!--<input type="text" id="searchTime" placeholder="Please select date" data-uk-datepicker="{format:'YYYY/MM/DD'}">-->
+    <!--<input type="text" placeholder="Please enter title" id="searchTitle">-->
+    <!--<span class="uk-icon-button uk-icon-search searchLink"></span>-->
+<!--</form>-->
+
+<!--产品列表-->
+<div class="product uk-hidden-small">
+    <div class="productNav">
+        <i class="uk-icon-navicon uk-icon-large productIcon"></i>
+        <span class="uk-h2 productTitle">Course List</span>
+        <span class="uk-h4 productMore"><a href="lesson.html">more</a></span>
+    </div>
+    <div class="productShow">
+        <!--拨动器-->
+        <ul class="uk-subnav uk-subnav-pill  productList" data-uk-switcher="{connect:'#productChange'}">
+            <li><a id="proTypeFir" href="">Class1</a></li>
+            <li><a id="proTypeSec" href="">Class2</a></li>
+            <li><a id="proTypeThi" href="">Class3</a></li>
+            <li><a id="proTypeFou" href="">Class4</a></li>
+        </ul>
+        <!--项目容器-->
+        <ul id="productChange" class="uk-switcher">
+            <li class="firPro">
+                <ul class="uk-list productIntro">
+                    <li class="firProFir"></li>
+                    <li class="firProSec"></li>
+                    <li class="firProThi"></li>
+                </ul>
+            </li>
+            <li class="secPro">
+                <ul class="uk-list productIntro">
+                    <li class="secProFir"></li>
+                    <li class="secProSec"></li>
+                    <li class="secProThi"></li>
+                </ul>
+            </li>
+            <li class="thiPro">
+                <ul class="uk-list productIntro">
+                    <li class="thiProFir"></li>
+                    <li class="thiProSec"></li>
+                    <li class="thiProThi"></li>
+                </ul>
+            </li>
+            <li class="fouPro">
+                <ul class="uk-list productIntro">
+                    <li class="fouProFir"></li>
+                    <li class="fouProSec"></li>
+                    <li class="fouProThi"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--关于我们-->
+<div class="uk-hidden-small aboutUs">
+    <div class="aboutUsNav">
+        <i class="uk-icon-user uk-icon-large aboutUsIcon"></i>
+        <span class="uk-h2 aboutUsTitle">About Us</span>
+    </div>
+    <div class="aboutUsInfo">
+        <span></span>
+    </div>
+    <div class="aboutUsSwiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="bannerSmallBox">
+                <!--<div class="swiper-slide"><img src="../images/1.png"/></div>-->
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</div>
+
+<!--联系我们-->
+<div class="uk-hidden-small contactUs">
+    <div class="contactUsNav">
+        <i class="uk-icon-phone uk-icon-large contactUsIcon"></i>
+        <span class="uk-h2 contactUsTitle">Contact Us</span>
+    </div>
+    <div class="contactUsWri">
+
+        <!--placeholder="请输入你的姓名"还没写-->
+
+        <label for="writeName">Name &nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input placeholder="Enter your name" id="writeName" type="text"/>
+        <br/><br/>
+        <label for="writePhone">Tele &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input placeholder="Enter your phone" id="writePhone" type="text"/>
+        <br/><br/>
+        <label for="writeTitle">message </label>
+        <input placeholder="Enter your message title" id="writeTitle" type="text"/>
+        <br/><br/>
+        <label class="writeVisibility">message </label>
+        <textarea placeholder="Enter your message content" id="writeText" rows="10"></textarea>
+        <br/><br/>
+        <label class="writeVisibility">message </label>
+        <button class="uk-button writeSubmit"> Submit </button>
+    </div>
+</div>

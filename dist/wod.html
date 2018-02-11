@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="author" content="XuQingfeng">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <title>Bodybuilding Website</title>
+
+    <!-- link uikit -->
+    <link rel="stylesheet" type="text/css" href="../css/uikit.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/form-select.css">
+
+    <!--link swiper-->
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css"/>
+
+    <!--头部和尾部的CSS-->
+    <link rel="stylesheet" href="../css/commonPart.css"/>
+    <!--边栏的CSS-->
+    <link rel="stylesheet" href="../css/sidebar.css"/>
+    <!--中间内容css-->
+    <link rel="stylesheet" href="../css/index.css"/>
+    <!--页面中间主要内容相对应的css-->
+    <link rel="stylesheet" href="../css/wodList.css"/>
+</head>
+
+<!--自适应页面-width: auto; width: xx%;-->
+
+<!-- 判断浏览器，低版本升级 -->
+<!--[if lt IE 9]>
+<p class="chromeframe">The IE browser version you are using is too low and this site is no longer supported,<a href="//windows.microsoft.com/">Please upgrade your IE browser</a>，Or use<a href="//www.google.cn/chrome/">Google Chrome</a>、<a href="//www.firefox.com.cn/download/">Firefox</a>These advanced browsers, you'll get a better experience!</p>
+<![endif]-->
+
+<body>
+<!--头部-->
+<div class="headerTop">
+    <div class="headerIcon">
+        <a href="" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-facebook-square"></a>
+        <a href="" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-twitter"></a>
+        <a href="" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-envelope-o"></a>
+        <a href="" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-wechat "></a>
+        <a href="" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-weibo"></a>
+        <a href="" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-qq"></a>
+    </div>
+    <div class="clear"></div>
+</div>
+<nav class="uk-navbar header">
+    <a class="headerLogo uk-hidden-small" href="index.html">
+        <img id="logo" src="../images/logo.png" alt="logo">
+    </a>
+
+    <ul class="uk-navbar-nav headerNav">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="wod.html">Wod </a>
+        </li>
+
+        <li>
+            <a href="schedule.html">Schedule</a>
+        </li>
+
+        <li>
+            <a href="lesson.html">Course </a>
+        </li>
+
+        <li>
+            <a href="storeIntrodution.html">About us</a>
+        </li>
+    </ul>
+</nav>
+
+
+<!--中间部分-->
+<div class="content clearfix">
+
+    <!--中间主要内容-->
+    <div class="wodList uk-animation-slide-bottom">
+
+        <!--WOD搜索框-->
+        <div class="wodSearch">
+            <input type="text" id="searchTime" readonly="readonly" placeholder="Please select date" data-uk-datepicker="{format:'YYYY-MM-DD'}">
+            <div class="searchLink"><span>SEARCH</span></div>
+            <p class="clear"></p>
+        </div>
+
+        <!--WOD每一条信息-->
+        <ul id="wodConBox">
+            <!--<li class="wodListItem">-->
+                <!--<div class="wodListLeft">-->
+                    <!--<img src="../images/1.png" class="wodListImg"/>-->
+                <!--</div>-->
+                <!--<div class="wodListRight">-->
+                    <!--<p class="wodListDate uk-h2" >2017-08-03 Thursday</p>-->
+                    <!--<p class="wodListTitle uk-h2">This is title</p>-->
+                    <!--<div class="wodListContent">-->
+                        <!--&lt;!&ndash;you can write the text here, I will show you.you can write the text here, I will show you.you can write the text here, I will show you.you can write the text here, I will show you.&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="clear"></div>-->
+            <!--</li>-->
+        </ul>
+        <button id="loading" class="uk-button uk-width-1-1 uk-button-primary">Click to load more...</button>
+    </div>
+
+    <!--右侧板栏-->
+    <div class="sidebar">
+        <!--&lt;!&ndash;搜索框&ndash;&gt;-->
+<!--<form class="uk-form uk-hidden-small">-->
+    <!--<select id="searchChoose">-->
+        <!--<option value="time">time</option>-->
+        <!--<option value="title">title</option>-->
+    <!--</select>-->
+    <!--<input type="text" id="searchTime" placeholder="Please select date" data-uk-datepicker="{format:'YYYY/MM/DD'}">-->
+    <!--<input type="text" placeholder="Please enter title" id="searchTitle">-->
+    <!--<span class="uk-icon-button uk-icon-search searchLink"></span>-->
+<!--</form>-->
+
+<!--产品列表-->
+<div class="product uk-hidden-small">
+    <div class="productNav">
+        <i class="uk-icon-navicon uk-icon-large productIcon"></i>
+        <span class="uk-h2 productTitle">Course List</span>
+        <span class="uk-h4 productMore"><a href="lesson.html">more</a></span>
+    </div>
+    <div class="productShow">
+        <!--拨动器-->
+        <ul class="uk-subnav uk-subnav-pill  productList" data-uk-switcher="{connect:'#productChange'}">
+            <li><a id="proTypeFir" href="">Class1</a></li>
+            <li><a id="proTypeSec" href="">Class2</a></li>
+            <li><a id="proTypeThi" href="">Class3</a></li>
+            <li><a id="proTypeFou" href="">Class4</a></li>
+        </ul>
+        <!--项目容器-->
+        <ul id="productChange" class="uk-switcher">
+            <li class="firPro">
+                <ul class="uk-list productIntro">
+                    <li class="firProFir"></li>
+                    <li class="firProSec"></li>
+                    <li class="firProThi"></li>
+                </ul>
+            </li>
+            <li class="secPro">
+                <ul class="uk-list productIntro">
+                    <li class="secProFir"></li>
+                    <li class="secProSec"></li>
+                    <li class="secProThi"></li>
+                </ul>
+            </li>
+            <li class="thiPro">
+                <ul class="uk-list productIntro">
+                    <li class="thiProFir"></li>
+                    <li class="thiProSec"></li>
+                    <li class="thiProThi"></li>
+                </ul>
+            </li>
+            <li class="fouPro">
+                <ul class="uk-list productIntro">
+                    <li class="fouProFir"></li>
+                    <li class="fouProSec"></li>
+                    <li class="fouProThi"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--关于我们-->
+<div class="uk-hidden-small aboutUs">
+    <div class="aboutUsNav">
+        <i class="uk-icon-user uk-icon-large aboutUsIcon"></i>
+        <span class="uk-h2 aboutUsTitle">About Us</span>
+    </div>
+    <div class="aboutUsInfo">
+        <span></span>
+    </div>
+    <div class="aboutUsSwiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="bannerSmallBox">
+                <!--<div class="swiper-slide"><img src="../images/1.png"/></div>-->
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</div>
+
+<!--联系我们-->
+<div class="uk-hidden-small contactUs">
+    <div class="contactUsNav">
+        <i class="uk-icon-phone uk-icon-large contactUsIcon"></i>
+        <span class="uk-h2 contactUsTitle">Contact Us</span>
+    </div>
+    <div class="contactUsWri">
+
+        <!--placeholder="请输入你的姓名"还没写-->
+
+        <label for="writeName">Name &nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input placeholder="Enter your name" id="writeName" type="text"/>
+        <br/><br/>
+        <label for="writePhone">Tele &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input placeholder="Enter your phone" id="writePhone" type="text"/>
+        <br/><br/>
+        <label for="writeTitle">message </label>
+        <input placeholder="Enter your message title" id="writeTitle" type="text"/>
+        <br/><br/>
+        <label class="writeVisibility">message </label>
+        <textarea placeholder="Enter your message content" id="writeText" rows="10"></textarea>
+        <br/><br/>
+        <label class="writeVisibility">message </label>
+        <button class="uk-button writeSubmit"> Submit </button>
+    </div>
+</div>
+    </div>
+
+    <div class="clear"></div>
+</div>
+
+<!--尾部-->
+<div id="footer">
+    <div class="uk-grid uk-container uk-container-center">
+
+        <div class="uk-width-1-2">
+            <ul class="uk-list uk-list-space information">
+                <li>Zip code：200135</li>
+                <li>Postal address：Lane 666, Jinxiu Road, Shanghai, Pudong 23-601</li>
+                <li>Telephone：18201994280</li>
+                <li>E-mail:jiangchao@163.com</li>
+                <li>Chongqing University of Posts and Telecommunications Universe Technology Co., Ltd. All Rights Reserved &copy; 2017 xuqingfeng</li>
+            </ul>
+        </div>
+
+        <div class="uk-img-preserve map">
+            <a href="storeIntrodution.html"><img src="../images/map.png"/></a>
+        </div>
+
+        <div class="uk-img-preserve QR">
+            <img src="../images/QR.png" alt=""/>
+        </div>
+
+    </div>
+
+</div>
+
+<!--导入jq库件-->
+<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+
+<!--导入uikit-->
+<script type="text/javascript" src="../js/uikit.min.js"></script>
+<script type="text/javascript" src="../js/datepicker.min.js" ></script>
+<script type="text/javascript" src="../js/form-select.js" ></script>
+
+<!--头部尾部用到的js-->
+<script type="text/javascript" src="../js/topbottom.js"></script>
+
+<!--导入swiper-->
+<script type="text/javascript" src="../js/swiper-3.4.2.jquery.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+</script>
+
+<!--边栏用到的js-->
+<script type="text/javascript" src="../js/sidebar.js"></script>
+
+<!--页面中间主要内容相对应的js-->
+<script type="text/javascript" src="../js/wod.js" ></script>
+
+</body>
+</html>
