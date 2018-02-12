@@ -26,7 +26,8 @@ $(function (){
             }
         },
         error: function () {
-            console.log("Failed to get the store information.");
+            // console.log("Failed to get the store information.");
+            errorSug();
         }
     });
 
@@ -38,7 +39,7 @@ $(function (){
             //url: "http://rapapi.org/mockjsdata/22327/selectCoach",
             success: function (response) {
                 if (response.status === "1") {
-                    console.log(response.data.result.length);
+                    // console.log(response.data.result.length);
                     for (var i = 0;i < response.data.result.length;i++) {
                         var content = '<li>' +
                                             '<div class="uk-animation-slide-bottom storeCoachesImg">' +
@@ -55,7 +56,8 @@ $(function (){
                 }
             },
             error: function () {
-                console.log("Failed to obtain coaching information.");
+                // console.log("Failed to obtain coaching information.");
+                errorSug();
             }
         });
     }

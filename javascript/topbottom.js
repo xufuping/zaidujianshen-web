@@ -1,5 +1,19 @@
-$(function(){
+// 错误提示
+var errorDiv = $(".errorSug");
+errorDiv.on("click", function(){
+    errorDiv.fadeOut("slow");
+})
 
+function errorSug () {
+    errorDiv.fadeIn("slow");
+    if (errorDiv.css('display') == "block") {
+        setTimeout(function(){
+            errorDiv.fadeOut("slow");
+        }, 5000)
+    }
+}
+
+$(function(){
     // 回到顶部
     var goTop = (function(){
         var $goTop = $('<div id="go-top">回到<br>顶部</div>');

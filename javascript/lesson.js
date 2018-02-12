@@ -16,7 +16,7 @@ $(function () {
         //},
         success: function (response) {
             if (response.status === "1") {
-                console.log("我是返回的数据总条数：" + response.data.result.length);
+                // console.log("我是返回的数据总条数：" + response.data.result.length);
                 for (var i = 0; i < response.data.result.length; i++) {
                     var content = '<li>' +
                                         '<figure class="uk-overlay uk-overlay-hover">' +
@@ -41,7 +41,8 @@ $(function () {
             }
         },
         error: function () {
-            console.log("product-Server error. Please try again.");
+            // console.log("product-Server error. Please try again.");
+            errorSug();
         }
     });
 

@@ -1,0 +1,287 @@
+/*边栏-搜索*/
+/*#searchChoose{*/
+    /*border-right: none;*/
+/*}*/
+/*#searchTime{*/
+    /*width: 30%;*/
+    /*position: relative;*/
+    /*left: -2%;*/
+    /*border-left: none;*/
+    /*display: inline;*/
+/*}*/
+/*#searchTitle{*/
+    /*width: 30%;*/
+    /*position: relative;*/
+    /*left: -2%;*/
+    /*border-left: none;*/
+    /*display: none;*/
+/*}*/
+/*.searchLink{*/
+    /*width: 3em;height: 3em;*/
+    /*position: relative;*/
+    /*left: -5%;*/
+    /*color: #ffffff;*/
+    /*line-height: 3em;*/
+    /*background-color: #FB565C;*/
+/*}*/
+/*.searchLink:hover{*/
+    /*background-color: #148edd;*/
+/*}*/
+
+/*边栏-产品列表*/
+.product{
+    position: relative;
+    top: 2em;
+    width: 80%;
+    background-color: #FB565C;
+}
+@media screen and (min-width: 2450px){
+    .product{
+        height: 95em;
+    }
+}
+@media screen and (max-width: 2450px){
+    .product{
+        height: 83em;
+    }
+}
+@media screen and (max-width: 2200px){
+    .product{
+        height: 75em;
+    }
+}
+@media screen and (max-width: 1900px){
+    .product{
+        height: 66em;
+    }
+}
+@media screen and (max-width: 1680px){
+    .product{
+        height: 64em;
+    }
+}
+@media screen and (max-width: 1500px){
+    .product{
+        height: 56em;
+    }
+}
+@media screen and (max-width: 1400px){
+    .product{
+        height: 52em;
+    }
+}
+@media screen and (max-width: 1200px){
+    .product{
+        height: 43em;
+    }
+}
+@media screen and (max-width: 950px){
+    .product{
+        width: 100%;
+    }
+}
+.productNav{
+    width: 100%;
+    height: 3em;
+    line-height: 3em;
+    border-bottom: 1px solid #faf7f1;
+}
+.productIcon{
+    position: relative;
+    left: 3%;
+    color: #ffffff;
+}
+.productTitle{
+    position: relative;
+    left: 5%;top: 3px;
+    color: #ffffff;
+}
+/* .productMore{
+    float: right;
+    position: relative;
+    right: 2%;top: 30%;
+    color: #ffffff;
+}
+.productMore a{
+    text-decoration: none;
+    color: #f5f5f5;
+} */
+/*产品类别导航*/
+.productList{
+    position: relative;
+    left: 20%;
+}
+@media screen and (min-width: 1440px){
+    .productList{
+        position: relative;
+        left: 25%;top: 7px;
+    }
+}
+@media screen and (min-width: 2000px){
+    .productList{
+        position: relative;
+        left: 30%;top: 7px;
+    }
+}
+.productList li{
+    padding: 3px 2px;
+    border-right: 1px solid #f5f5f5;
+}
+.productList li:last-child{
+    border-right: none;
+}
+.productList li a{
+    padding: 0px;
+    font-size: 12px;
+}
+/*每个产品展示信息*/
+.productIntro li{
+    width: 80%;height: 15em;
+    margin: 0 auto;
+    padding: 7em 0;
+}
+.productIntro li:first-child{
+    padding-top: 10px;
+}
+@media screen and (max-width: 2450px){
+    .productIntro li{
+        padding: 5em 0;
+    }
+}
+@media screen and (max-width: 2200px){
+    .productIntro li{
+        padding: 4em 0;
+    }
+}
+@media screen and (max-width: 1900px){
+    .productIntro li{
+        padding: 2.5em 0;
+    }
+}
+@media screen and (max-width: 1500px){
+    .productIntro li{
+        padding: 1em 0;
+    }
+}
+@media screen and (max-width: 1400px){
+    .productIntro li{
+        padding: 0.3em 0;
+    }
+}
+@media screen and (max-width: 1200px){
+    .productIntro li{
+        height: 12em;
+        padding: 0.1em 0;
+    }
+}
+@media screen and (max-width: 1024px){
+    .productIntro li{
+        height: 12em;
+        padding: 0;
+    }
+}
+.productIntro li img{
+    width: 100%;height: 100%;
+}
+.productInfo{
+    height: 85%;
+}
+
+/*关于我们*/
+.aboutUs{
+    position: relative;
+    top: 4em;
+    width: 80%;
+    background-color: #FB565C;
+}
+@media screen and (max-width: 950px){
+    .aboutUs{
+        width: 100%;
+    }
+}
+.aboutUsNav{
+    width: 100%;
+    height: 3em;
+    line-height: 3em;
+    border-bottom: 1px solid #faf7f1;
+}
+.aboutUsIcon{
+    position: relative;
+    left: 3%;
+    color: #ffffff;
+}
+.aboutUsTitle{
+    position: relative;
+    left: 5%;top: 3px;
+    color: #ffffff;
+}
+.aboutUsInfo{
+    width: 90%;
+    margin: 10px auto;
+    font-size: 15px;
+    color: #ffffff;
+}
+.aboutUsSwiper{
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+.aboutUsSwiper img{
+    width: 100%;
+    height: 10em;
+}
+
+/*联系我们*/
+.contactUs{
+    position: relative;
+    top: 6em;
+    width: 80%;
+    background-color: #FB565C;
+}
+@media screen and (max-width: 950px){
+    .contactUs{
+        width: 100%;
+    }
+}
+.contactUsNav{
+    width: 100%;
+    height: 3em;
+    line-height: 3em;
+    border-bottom: 1px solid #faf7f1;
+}
+.contactUsIcon{
+    position: relative;
+    left: 3%;
+    color: #ffffff;
+}
+.contactUsTitle{
+    position: relative;
+    left: 5%;top: 3px;
+    color: #ffffff;
+}
+.contactUsWri{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0px;
+}
+.contactUsWri input{
+    width: 70%;
+}
+.writeVisibility{
+    visibility: hidden;
+}
+.contactUsWri textarea{
+    width: 70%;
+}
+.contactUsWri button{
+    width: 72%;
+    color: #ffffff;
+    background-color: #FB565C;
+    -webkit-box-shadow: 1px 1px 5px #888888;
+    -moz-box-shadow: 1px 1px 5px #888888;
+    box-shadow: 1px 1px 5px #888888;
+}
+.contactUsWri button:hover{
+    background-color: #ffffff;
+}
+

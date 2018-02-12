@@ -18,7 +18,8 @@ $(function(){
             }
         },
         error: function() {
-            console.log("Failed to obtain picture.");
+            // console.log("Failed to obtain picture.");
+            errorSug();
         }
     });
 
@@ -41,7 +42,8 @@ $(function () {
             }
         },
         error: function() {
-            console.log("Failed to obtain picture.");
+            // console.log("Failed to obtain picture.");
+            errorSug();
         }
     });
 

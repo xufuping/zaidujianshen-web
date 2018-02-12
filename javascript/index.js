@@ -32,7 +32,7 @@ $(function(){
             },
             success: function (response) {
 
-                console.log("我是请求页码"+pageIndex);
+                // console.log("我是请求页码"+pageIndex);
 
                 if (response.status === "1") {
                     //console.log("我是返回的数据总条数：" + response.data.result.length);
@@ -48,15 +48,16 @@ $(function(){
                             '</div>' +
                             '</li>';
 
-                        console.log("我是返回的第" + i + "次数据:");
+                        // console.log("我是返回的第" + i + "次数据:");
                         essayUl.append(content);
                     }
                     pageIndex += 1;
-                    console.log("我是返回页码数："+pageIndex);
+                    // console.log("我是返回页码数："+pageIndex);
                 }
             },
             error: function () {
-                console.log("Essay-Server error. Please try again.");
+                // console.log("Essay-Server error. Please try again.");
+                errorSug();
             }
         });
     }
@@ -70,7 +71,7 @@ $(function(){
         success: function(response) {
             if (response.status === "1") {
                 for (var i = 0; i < response.data.length; i++) {
-                    console.log("第" + (i+1) + "个轮播图返回成功" + response.data[i].bannerImg);
+                    // console.log("第" + (i+1) + "个轮播图返回成功" + response.data[i].bannerImg);
                     var content = '<div class="swiper-slide"><img src="'
                         + response.data[i].bannerImg +
                         '"/></div>';
@@ -79,7 +80,8 @@ $(function(){
             }
         },
         error: function() {
-            console.log("Banner-Server error. Please try again.");
+            // console.log("Banner-Server error. Please try again.");
+            errorSug();
         }
     });
 });

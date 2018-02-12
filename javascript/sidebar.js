@@ -116,7 +116,8 @@ $(function() {
                }
            },
            error: function() {
-            console.log("CourseList-Server error. Please try again.");
+            // console.log("CourseList-Server error. Please try again.");
+            errorSug();
            }
        });
 
@@ -139,7 +140,8 @@ $(function() {
            }
        },
        error: function() {
-        console.log("About us words-Server error. Please try again.");
+        // console.log("About us words-Server error. Please try again.");
+        errorSug();
        }
   });
 
@@ -154,7 +156,7 @@ $(function() {
        success: function(response) {
            if (response.status === "1") {
                for (var i = 0; i < response.data.length; i++) {
-                   console.log("第" + (i+1) + "个轮播图返回成功" + response.data[i].bannerImg);
+                //    console.log("第" + (i+1) + "个轮播图返回成功" + response.data[i].bannerImg);
                    var content = '<div class="swiper-slide"><img src="'
                        + response.data[i].bannerImg +
                        '"/></div>';
@@ -163,7 +165,8 @@ $(function() {
            }
        },
        error: function() {
-        console.log("About us banner-Server error. Please try again.");
+        // console.log("About us banner-Server error. Please try again.");
+        errorSug();
        }
    });
 
@@ -179,7 +182,8 @@ $(function() {
            $("#writePhone").val() == "" ||
            $("#writeTitle").val() == "" ||
            $("#writeText").val() == ""){
-            console.log("I'm sorry, the information you entered is incomplete.");
+            // console.log("I'm sorry, the information you entered is incomplete.");
+            errorSug();
        } else {
            if(/^1[34578]\d{9}$/.test($("#writePhone").val())){
                $.ajax({
@@ -194,20 +198,22 @@ $(function() {
                    },
                    success: function(response) {
                        if (response.status === "1") {
-                           console.log($("#writeName").val() +
-                                       $("#writePhone").val() +
-                                       $("#writeTitle").val() +
-                                       $("#writeText").val());
-                           console.log("Submit success!");
+                        //    console.log($("#writeName").val() +
+                        //                $("#writePhone").val() +
+                        //                $("#writeTitle").val() +
+                        //                $("#writeText").val());
+                        //    console.log("Submit success!");
                            window.location.reload();
                        }
                    },
                    error: function() {
-                       console.log("Sorry, there was an error in the server when it was submitted.");
+                    //    console.log("Sorry, there was an error in the server when it was submitted.");
+                    errorSug();
                    }
                });
            } else {
-            console.log("I'm sorry, your phone number is incorrect.");
+            // console.log("I'm sorry, your phone number is incorrect.");
+            errorSug();
            }
        }
    });

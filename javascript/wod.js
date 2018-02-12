@@ -21,7 +21,7 @@ $(function() {
         if ($("#searchTime").val() === "") {
             window.location.reload();
         } else {
-            console.log("你输入的是"+$("#searchTime").val());
+            // console.log("你输入的是"+$("#searchTime").val());
             $.ajax({
                 type: "GET",
                 url: "/blog/search",
@@ -53,7 +53,8 @@ $(function() {
                     }
                 },
                 error: function(){
-                    console.log("Search for error. Please try again.");
+                    // console.log("Search for error. Please try again.");
+                    errorSug();
                 }
             });
         }
@@ -119,7 +120,8 @@ $(function () {
                 }
             },
             error: function () {
-                console.log("Wod-Server error. Please try again.");
+                // console.log("Wod-Server error. Please try again.");
+                errorSug();
             }
         });
     }

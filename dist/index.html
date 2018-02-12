@@ -6,7 +6,10 @@
     <meta name="author" content="XuQingfeng">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-    <title>Bodybuilding Website</title>
+    <title>再度开始健身</title>
+
+    <!-- link icon logo -->
+    <link rel="icon" href="../images/icon.png" type="image/x-icon"/>
 
     <!-- link uikit -->
     <link rel="stylesheet" type="text/css" href="../css/uikit.min.css">
@@ -34,43 +37,48 @@
     <!--头部-->
     <div class="headerTop">
     <div class="headerIcon">
-        <a href="" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-facebook-square"></a>
-        <a href="" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-twitter"></a>
-        <a href="" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-envelope-o"></a>
-        <a href="" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-wechat "></a>
-        <a href="" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-weibo"></a>
-        <a href="" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-qq"></a>
+        <!-- <a href="" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-facebook-square"></a> -->
+        <!-- <a href="" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-twitter"></a> -->
+        <!-- <a href="" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-envelope-o"></a> -->
+        <a href="./wechat.html" target="_blank" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-wechat "></a>
+        <a href="https://weibo.com/6251867327/manage" target="_blank" class="uk-icon-button uk-icon-medium uk-icon-hover uk-icon-weibo"></a>
     </div>
     <div class="clear"></div>
 </div>
 <nav class="uk-navbar header">
     <a class="headerLogo uk-hidden-small" href="index.html">
-        <img id="logo" src="../images/logo.png" alt="logo">
+        <!-- <img id="logo" src="../images/logo.png" alt="logo"> -->
     </a>
 
     <ul class="uk-navbar-nav headerNav">
         <li>
-            <a href="index.html">Home</a>
+            <a href="./index.html">Home</a>
         </li>
 
         <li>
-            <a href="wod.html">Wod </a>
+            <a href="./wod.html">Wod </a>
         </li>
 
         <li>
-            <a href="schedule.html">Schedule</a>
+            <a href="./schedule.html">Schedule</a>
         </li>
 
         <li>
-            <a href="lesson.html">Course </a>
+            <a href="./lesson.html">Course </a>
         </li>
 
         <li>
-            <a href="storeIntrodution.html">About us</a>
+            <a href="./storeIntrodution.html">About us</a>
         </li>
     </ul>
 </nav>
 
+<!-- 错误提示 -->
+<div class="errorSug">
+    <div class="errorWord">
+        <p>亲，因网络问题导致加载出错，请重试哟~</p>
+    </div>
+</div>
 
     <!--轮播-->
     <div class="swiper-container">
@@ -117,46 +125,46 @@
     <div class="productNav">
         <i class="uk-icon-navicon uk-icon-large productIcon"></i>
         <span class="uk-h2 productTitle">Course List</span>
-        <span class="uk-h4 productMore"><a href="lesson.html">more</a></span>
+        <!-- <span class="uk-h4 productMore"><a href="lesson.html">more</a></span> -->
     </div>
     <div class="productShow">
         <!--拨动器-->
-        <ul class="uk-subnav uk-subnav-pill  productList" data-uk-switcher="{connect:'#productChange'}">
-            <li><a id="proTypeFir" href="">Class1</a></li>
-            <li><a id="proTypeSec" href="">Class2</a></li>
-            <li><a id="proTypeThi" href="">Class3</a></li>
-            <li><a id="proTypeFou" href="">Class4</a></li>
+        <ul class="uk-subnav uk-subnav-pill productList" data-uk-switcher="{connect:'#productChange'}">
+            <li><a id="proTypeFir" href="">常规课程</a></li>
+            <li><a id="proTypeSec" href="">格斗健身</a></li>
+            <li><a id="proTypeThi" href="">拉伸课程</a></li>
+            <!-- <li><a id="proTypeFou" href="">Class4</a></li> -->
         </ul>
         <!--项目容器-->
         <ul id="productChange" class="uk-switcher">
             <li class="firPro">
                 <ul class="uk-list productIntro">
-                    <li class="firProFir"></li>
-                    <li class="firProSec"></li>
-                    <li class="firProThi"></li>
+                    <a href="./lesson.html"><li class="firProFir"></li></a>
+                    <a href="./lesson.html"><li class="firProSec"></li></a>
+                    <a href="./lesson.html"><li class="firProThi"></li></a>
                 </ul>
             </li>
             <li class="secPro">
                 <ul class="uk-list productIntro">
-                    <li class="secProFir"></li>
-                    <li class="secProSec"></li>
-                    <li class="secProThi"></li>
+                    <a href="./lesson.html"><li class="secProFir"></li></a>
+                    <a href="./lesson.html"><li class="secProSec"></li></a>
+                    <a href="./lesson.html"><li class="secProThi"></li></a>
                 </ul>
             </li>
             <li class="thiPro">
                 <ul class="uk-list productIntro">
-                    <li class="thiProFir"></li>
-                    <li class="thiProSec"></li>
-                    <li class="thiProThi"></li>
+                    <a href="./lesson.html"><li class="thiProFir"></li></a>
+                    <a href="./lesson.html"><li class="thiProSec"></li></a>
+                    <a href="./lesson.html"><li class="thiProThi"></li></a>
                 </ul>
             </li>
-            <li class="fouPro">
+            <!-- <li class="fouPro">
                 <ul class="uk-list productIntro">
                     <li class="fouProFir"></li>
                     <li class="fouProSec"></li>
                     <li class="fouProThi"></li>
                 </ul>
-            </li>
+            </li> -->
         </ul>
     </div>
 </div>
@@ -219,11 +227,11 @@
 
         <div class="uk-width-1-2">
             <ul class="uk-list uk-list-space information">
-                <li>Zip code：200135</li>
-                <li>Postal address：Lane 666, Jinxiu Road, Shanghai, Pudong 23-601</li>
-                <li>Telephone：18201994280</li>
-                <li>E-mail:jiangchao@163.com</li>
-                <li>Chongqing University of Posts and Telecommunications Universe Technology Co., Ltd. All Rights Reserved &copy; 2017 xuqingfeng</li>
+                <li>地址：上海浦东新区 杨高中路2108号天物空间5楼 A506 18621635887</li>
+                <li>地址：上海浦东新区 海桐路338号世纪联华二楼开始健身工作室 18621635887</li>
+                <li>Telephone：18621635887</li>
+                <li>E-mail：17321180881@163.com</li>
+                <li>Chongqing University of Posts and Telecommunications Universe Technology Co Ltd. All Rights Reserved &copy; xuqingfeng</li>
             </ul>
         </div>
 
@@ -232,7 +240,7 @@
         </div>
 
         <div class="uk-img-preserve QR">
-            <img src="../images/QR.png" alt=""/>
+            <img src="../images/pubImg.png" alt=""/>
         </div>
 
     </div>

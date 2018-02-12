@@ -1,0 +1,94 @@
+li{
+    list-style-type:none;
+}
+.course{
+    width: 65%;
+    position: relative;
+    top: 2em;
+    float: left;
+}
+@media screen and (max-width: 767px){
+    .course{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+.courseShow li{
+    float: left;
+    width: 28%;
+    margin-left: 5%;
+    margin-top: 3%;
+    border: 1px solid #b3b3b6;
+    cursor: pointer;
+}
+.courseShow li:hover{
+    border: 1px solid #b66253;
+}
+.courseImg {
+    width: 100%;
+    height: 140px;
+}
+@media screen and (min-width: 1750px){
+    .courseImg{
+        height: 150px;
+    }
+}
+@media screen and (min-width: 1950px){
+    .courseImg{
+        height: 160px;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .courseImg{
+        height: 130px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .courseImg{
+        height: 115px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .courseImg{
+        height: 100px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .courseImg{
+        height: 80px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .courseImg{
+        height: 60px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .courseImg{
+        height: 50px;
+    }
+}
+.courseImg img{
+    width: 100%;
+    height: 100%;
+}
+.courseText p{
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 0px;
+}
+.coursePrice{
+    font-size: 1.2rem;
+    color: #dd5905;
+}
+.courseTitle{
+    font-weight: bold;
+}
+.courseBox{
+    padding: 3px;
+    height: 100%;
+}
+.courseIntro{
+    margin-left: 1%;
+    margin-top: 2%;
+}

@@ -2,6 +2,7 @@ const gulp = require('gulp'); // 引入gulp
 const uglify = require('gulp-uglify'); // 引入js压缩
 const fileinclude  = require('gulp-file-include'); // 引入文件合并
 const htmlmin = require('gulp-htmlmin'); // 压缩html
+const cleanCSS = require('gulp-clean-css');
 
 gulp.task('fileinclude', function() {
     // 适配page中所有文件夹下的所有html，排除page下的include文件夹中html
@@ -36,4 +37,11 @@ gulp.task('htmlmin', function () {
     gulp.src('dist/*.html')
         .pipe(htmlmin(options))
         .pipe(gulp.dest('tryDist'));
+});
+
+// 压缩css文件, 如果有外部引用，为了保持项目结构，需要使用插件 gulp-sourcemaps
+gulp.task('cssmin', () => {
+    gulp.src('cssstyle/*.css')
+        .pipe(cleanCSS({compatibility: 'ie8'})) // 兼容IE8及以下浏览器
+        .pipe(gulp.dest('css'));
 });
