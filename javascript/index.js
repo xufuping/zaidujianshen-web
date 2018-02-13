@@ -24,7 +24,7 @@ $(function(){
         $.ajax({
             type: "GET",
             url: "/blog/findAllArticles",
-            //url: "http://rapapi.org/mockjsdata/22327/findAllArticles",
+            // url: "http://rapapi.org/mockjsdata/22327/findAllArticles",
             //url: "http://172.22.4.202:8888/blog/findAllArticles?pageIndex=1&pageSize=5",
             data: {
                 pageIndex: pageIndex,
@@ -37,6 +37,10 @@ $(function(){
                 if (response.status === "1") {
                     //console.log("我是返回的数据总条数：" + response.data.result.length);
                     for (var i = 0; i < response.data.result.length; i++) {
+                        if (i == 1) {
+                            // console.log("unslider");
+                            unsliderStart(); // 发送加载图片的ajax
+                        }
                         var content = '<li class="essayList">' +
                             '<div class="essayBox">' +
                             '<p class="uk-h2 essayDate">' + response.data.result[i].articleTime + '</p>' +
@@ -56,32 +60,35 @@ $(function(){
                 }
             },
             error: function () {
-                // console.log("Essay-Server error. Please try again.");
+                console.log("Essay-Server error. Please try again.");
                 errorSug();
             }
         });
     }
 
     // 获取轮播图片
-    $.ajax({
-        type: "GET",
-        url: " /blog/findBannerByType/" + bannerType,
-        //url:"http://rapapi.org/mockjsdata/22327/findBannerByType/%7BbannerType%7D" ,
-        //url: "http://172.22.4.202:8888/blog/findBannerByType/bigBanner",
-        success: function(response) {
-            if (response.status === "1") {
-                for (var i = 0; i < response.data.length; i++) {
-                    // console.log("第" + (i+1) + "个轮播图返回成功" + response.data[i].bannerImg);
-                    var content = '<div class="swiper-slide"><img src="'
-                        + response.data[i].bannerImg +
-                        '"/></div>';
-                    $("#bannerBigBox").append(content);
+    function unsliderStart() {
+        // console.log("执行成功！");
+        $.ajax({
+            type: "GET",
+            url: " /blog/findBannerByType/" + bannerType,
+            // url:"http://rapapi.org/mockjsdata/22327/findBannerByType/%7BbannerType%7D" ,
+            //url: "http://172.22.4.202:8888/blog/findBannerByType/bigBanner",
+            success: function(response) {
+                if (response.status === "1") {
+                    for (var i = 0; i < response.data.length; i++) {
+                        // console.log("第" + (i+1) + "个轮播图返回成功" + response.data[i].bannerImg);
+                        var content = '<li><img src="' 
+                        + response.data[i].bannerImg + 
+                        '" alt="图片正在加载，请稍等..." width="100%" ></li>';
+                        $("#bannerBoxul").append(content);
+                    }
                 }
+            },
+            error: function() {
+                // console.log("Banner-Server error. Please try again.");
+                errorSug();
             }
-        },
-        error: function() {
-            // console.log("Banner-Server error. Please try again.");
-            errorSug();
-        }
-    });
+        });
+    }
 });

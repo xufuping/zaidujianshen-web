@@ -36,18 +36,18 @@ $(function (){
         $.ajax({
             type: "GET",
             url: "/blog/selectCoach",
-            //url: "http://rapapi.org/mockjsdata/22327/selectCoach",
+            // url: "http://rapapi.org/mockjsdata/22327/selectCoach",
             success: function (response) {
                 if (response.status === "1") {
                     // console.log(response.data.result.length);
                     for (var i = 0;i < response.data.result.length;i++) {
-                        var content = '<li>' +
-                                            '<div class="uk-animation-slide-bottom storeCoachesImg">' +
-                                                '<img src="' + response.data.result[i].coachImg + '" />' +
-                                            '</div>' +
+                        var content =   '<li>' +
                                             '<div class="uk-animation-slide-bottom storeCoachesText">' +
                                                 '<h1>' + response.data.result[i].coachName + '</h1>' +
                                                 '<p>' + response.data.result[i].coachIntroduction + '</p>' +
+                                            '</div>' +
+                                            '<div class="uk-animation-slide-bottom storeCoachesImg">' +
+                                                '<img src="' + response.data.result[i].coachImg + '" />' +
                                             '</div>' +
                                             '<div class="clear"></div>' +
                                         '</li>';

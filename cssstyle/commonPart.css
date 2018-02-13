@@ -230,7 +230,7 @@
 }
 .errorWord {
     margin: 0 auto;
-    width: 40%;
+    width: 200px;
     display: -webkit-flex; /* Safari */
     display: flex;
     flex-flow: row wrap;
@@ -242,5 +242,6 @@
 .errorWord p {
     color: #F56C6C;
     padding-top: 2%;
-    font-size: 16px;
+    padding-left: 5px;
+    font-size: 14px;
 }

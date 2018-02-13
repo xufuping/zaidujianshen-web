@@ -146,29 +146,29 @@ $(function() {
   });
 
    // 声明获取轮播图
-   var bannerType = "smallBanner"; // 轮播图片类型
+//    var bannerType = "smallBanner"; // 轮播图片类型
 
    // 获取轮播图片
-   $.ajax({
-       type: "GET",
-       url: " /blog/findBannerByType/" + bannerType,
-       //url:"http://rapapi.org/mockjsdata/22327/findBannerByType/%7BbannerType%7D" ,
-       success: function(response) {
-           if (response.status === "1") {
-               for (var i = 0; i < response.data.length; i++) {
-                //    console.log("第" + (i+1) + "个轮播图返回成功" + response.data[i].bannerImg);
-                   var content = '<div class="swiper-slide"><img src="'
-                       + response.data[i].bannerImg +
-                       '"/></div>';
-                   $("#bannerSmallBox").append(content);
-               }
-           }
-       },
-       error: function() {
-        // console.log("About us banner-Server error. Please try again.");
-        errorSug();
-       }
-   });
+//    $.ajax({
+//        type: "GET",
+//        url: " /blog/findBannerByType/" + bannerType,
+//        //url:"http://rapapi.org/mockjsdata/22327/findBannerByType/%7BbannerType%7D" ,
+//        success: function(response) {
+//            if (response.status === "1") {
+//                for (var i = 0; i < response.data.length; i++) {
+//                 //    console.log("第" + (i+1) + "个轮播图返回成功" + response.data[i].bannerImg);
+//                    var content = '<div class="swiper-slide"><img src="'
+//                        + response.data[i].bannerImg +
+//                        '"/></div>';
+//                    $("#bannerSmallBox").append(content);
+//                }
+//            }
+//        },
+//        error: function() {
+//         // console.log("About us banner-Server error. Please try again.");
+//         errorSug();
+//        }
+//    });
 
 });
 
