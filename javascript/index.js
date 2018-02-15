@@ -49,7 +49,7 @@ $(function(){
                             '<p class="uk-h2 essayDate">' + response.data.result[i].articleTime + '</p>' +
                             '<p class="uk-h3 essayTitle">' + response.data.result[i].articleTitle + '</p>' +
                             '<div class="essayContent">' +
-                            response.data.result[i].articleLink +
+                            // response.data.result[i].articleLink +
                             response.data.result[i].articleContent +
                             '</div>' +
                             '</div>' +
